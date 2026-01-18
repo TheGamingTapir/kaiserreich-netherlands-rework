@@ -1,0 +1,17 @@
+
+HOL_rw_economic_dynmod = {
+	enable = {
+		always = no
+	}
+	icon = HOL_black_monday
+	stability_factor = HOL_rw_stability_var
+	production_factory_max_efficiency_factor = HOL_rw_prod_fact_max_eff_var
+	industrial_capacity_factory = HOL_rw_ind_cap_var
+	production_speed_buildings_factor = HOL_rw_prod_sp_blds_var
+	consumer_goods_factor = HOL_rw_cons_goods_var
+	production_factory_efficiency_gain_factor = HOL_rw_prod_fact_eff_var
+	political_power_factor = HOL_rw_pol_pow_fact_var
+	trade_opinion_factor = HOL_rw_trd_opp_fact_var
+	production_speed_industrial_complex_factor = HOL_rw_prod_sp_civ_fact_var
+	production_speed_arms_factory_factor = HOL_rw_prod_sp_mil_fact_var
+}

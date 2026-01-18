@@ -1,0 +1,6 @@
+HOL_coalition_cohesion_check = {
+	custom_override_tooltip = {
+		tooltip = HOL_coalition_cohesion_check_tt
+		NOT = { check_variable = { HOL_coalition_cohesion > 25 } }
+	}
+}

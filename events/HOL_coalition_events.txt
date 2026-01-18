@@ -1,0 +1,49 @@
+﻿# NETHERLANDS COALITION EVENTS
+
+add_namespace = netherlands_coalition_events
+
+country_event = { #Coalition collapse
+	id = netherlands_coalition_events.1
+	title = netherlands_coalition_events.1.t
+	desc = netherlands_coalition_events.1.d
+	picture = GFX_report_event_HOL_jordaanoproer
+
+	is_triggered_only = yes
+
+	option = {
+		name = netherlands_coalition_events.1.a
+		clr_country_flag = HOL_waining_coalition_flag
+		add_ideas = HOL_collapsed_coalition
+		set_temp_variable = { coalition_partner_var = token:social_liberal }
+		remove_from_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:social_conservative }
+		remove_from_coalition = yes
+		hidden_effect = {
+			set_politics = {
+				ruling_party = market_liberal
+                elections_allowed = yes
+	            last_election = "1933.05.24"
+                election_frequency = 45
+            }
+		}
+	}
+}
+
+country_event = { #Coalition prevails
+	id = netherlands_coalition_events.2
+	title = netherlands_coalition_events.2.t
+	desc = netherlands_coalition_events.2.d
+	picture = GFX_report_event_HOL_jordaanoproer
+
+	is_triggered_only = yes
+
+	option = {
+		name = netherlands_coalition_events.2.a
+		clr_country_flag = HOL_waining_coalition_flag
+		add_ideas = HOL_collapsed_coalition
+		add_to_variable = { HOL_coalition_cohesion = 1 }
+		hidden_effect = {
+			country_event = { id = netherlands_starting_events.10 days = 4 random_hours = 96 }
+		}
+	}
+}
