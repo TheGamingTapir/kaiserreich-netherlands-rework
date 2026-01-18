@@ -4182,1173 +4182,283 @@ focus_tree = {
 	}
 
 	focus = {
-		id = HOL_public_works
-		icon = GFX_goal_generic_construct_public_housing
-		cost = 5
-
-		relative_position_id = HOL_aftermath_black_monday
-		x = -6
-		y = 1
-
-		available = {
-			has_soclib_or_socdem_government = yes
-		}
+		id = HOL_drop_the_gold_standard
+		icon = GFX_focus_HOL_abandon_gold_standard
 		prerequisite = {
 			focus = HOL_aftermath_black_monday
 		}
 		mutually_exclusive = {
-			focus = HOL_drop_golden_standard
-			focus = HOL_werkverschaffing
-			focus = HOL_defense_spending_spree
+			focus = HOL_balance_the_budget
 		}
-		ai_will_do = { factor = 100 }
-
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_public_works"
-			add_political_power = -30
-			add_ideas = HOL_idea_public_works
-			if = {
-				limit = { has_idea = HOL_idea_economic_recovery }
-				swap_ideas = {
-					remove_idea = HOL_idea_economic_recovery
-					add_idea = HOL_idea_economic_recovery2
-				}
-			}
-			else = {
-				effect_tooltip = {
-					swap_ideas = {
-						remove_idea = HOL_idea_economic_recovery
-						add_idea = HOL_idea_economic_recovery2
-					}
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = HOL_extend_unemployment_sub
-		icon = GFX_goal_Winterhilfe
-		cost = 5
-
-		relative_position_id = HOL_public_works
-		x = -1
-		y = 1
-
-		available = {
-			has_socialist_government = no
-		}
-		prerequisite = {
-			focus = HOL_public_works
-		}
-		ai_will_do = { factor = 100 }
-
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_extend_unemployment_sub"
-			add_stability = 0.05
-			swap_ideas = {
-				remove_idea = HOL_idea_public_works
-				add_idea = HOL_idea_public_works2
-			}
-		}
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = HOL_rijksweg_12
-		icon = GFX_goal_generic_road_construction
-		cost = 5
-
-		relative_position_id = HOL_public_works
-		x = 1
-		y = 1
-
-		available = {
-			has_socialist_government = no
-		}
-		prerequisite = {
-			focus = HOL_public_works
-		}
-		ai_will_do = { factor = 100 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_rijksweg_12"
-			random_owned_controlled_state = {
-				prioritize = { 35 }
-				limit = {
-					is_core_of = ROOT
-					free_building_slots = { building = infrastructure size > 0 }
-					is_valid_state_for_development = yes
-					prefer_home_area_states_unless_filled = yes
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 866 }
-				limit = {
-					is_core_of = ROOT
-					free_building_slots = { building = infrastructure size > 0 }
-					is_valid_state_for_development = yes
-					prefer_home_area_states_unless_filled = yes
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = HOL_limited_working_week_2
-		icon = GFX_goal_generic_enforce_labor_regulation
-		cost = 5
-
-		relative_position_id = HOL_extend_unemployment_sub
-		x = 0
-		y = 1
-
-		available = {
-			has_socialist_government = no
-		}
-		prerequisite = {
-			focus = HOL_extend_unemployment_sub
-		}
-		ai_will_do = { factor = 100 }
-
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_limited_working_week_2"
-			add_stability = 0.05
-			swap_ideas = {
-				remove_idea = HOL_idea_public_works2
-				add_idea = HOL_idea_public_works3
-			}
-		}
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = hol_finish_afsluitdijk
-		icon = GFX_goal_generic_construct_civilian
-		cost = 5
-
-		relative_position_id = HOL_rijksweg_12
-		x = 0
-		y = 1
-
-		available = {
-			has_socialist_government = no
-		}
-		prerequisite = {
-			focus = HOL_rijksweg_12
-		}
-		ai_will_do = { factor = 100 }
-
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed hol_finish_afsluitdijk"
-			random_owned_controlled_state = {
-				prioritize = { 7 }
-				limit = {
-					is_core_of = ROOT
-					free_building_slots = { building = infrastructure size > 0 }
-					is_valid_state_for_development = yes
-					prefer_home_area_states_unless_filled = yes
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 36 }
-				limit = {
-					is_core_of = ROOT
-					free_building_slots = { building = infrastructure size > 0 }
-					is_valid_state_for_development = yes
-					prefer_home_area_states_unless_filled = yes
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = HOL_privatization_of_projects
-		icon = GFX_goal_generic_privatization
-		cost = 5
-
-		relative_position_id = HOL_public_works
-		x = 0
-		y = 3
-
-		available = {
-			has_socialist_government = no
-		}
-		prerequisite = {
-			focus = HOL_limited_working_week_2
-		}
-		prerequisite = {
-			focus = hol_finish_afsluitdijk
-		}
-		ai_will_do = { factor = 100 }
-
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_privatization_of_projects"
-			add_one_random_civilian_factory = yes
-			add_one_random_civilian_factory = yes
-			swap_ideas = {
-				remove_idea = HOL_idea_public_works3
-				add_idea = HOL_idea_public_works4
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = HOL_drop_golden_standard
-		icon = GFX_focus_HOL_abandon_gold_standard
-		cost = 5
 
 		relative_position_id = HOL_aftermath_black_monday
+		x = -3
+		y = 1
+
+		cost = 5
+
+		completion_reward = {
+
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = HOL_extend_unemployment_subsidies
+		icon = GFX_GBR_fate_of_unions
+		prerequisite = {
+			focus = HOL_drop_the_gold_standard
+		}
+
+		relative_position_id = HOL_drop_the_gold_standard
 		x = -2
 		y = 1
 
-		available = {
-			has_completed_focus = HOL_work_with_LSP
+		cost = 5
+
+		completion_reward = {
+
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = HOL_free_trade
+		icon = GFX_goal_AST_new_markets
+		prerequisite = {
+			focus = HOL_drop_the_gold_standard
+		}
+
+		relative_position_id = HOL_drop_the_gold_standard
+		x = 0
+		y = 1
+
+		cost = 5
+
+		completion_reward = {
+
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = HOL_state_investment
+		icon = GFX_focus_DEN_limited_regulations
+		prerequisite = {
+			focus = HOL_extend_unemployment_subsidies
+			focus = HOL_free_trade
+		}
+
+		relative_position_id = HOL_free_trade
+		x = -1
+		y = 1
+
+		cost = 5
+
+		completion_reward = {
+
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = HOL_balance_the_budget
+		icon = GFX_goal_generic_stable_government
 		prerequisite = {
 			focus = HOL_aftermath_black_monday
 		}
 		mutually_exclusive = {
-			focus = HOL_public_works
-			focus = HOL_werkverschaffing
-			focus = HOL_defense_spending_spree
+			focus = HOL_drop_the_gold_standard
 		}
-		ai_will_do = { factor = 100 }
 
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_drop_golden_standard"
-			add_stability = -0.05
-			add_ideas = HOL_idea_abandoned_goldstandard
-			if = {
-				limit = { has_idea = HOL_idea_economic_recovery }
-				swap_ideas = {
-					remove_idea = HOL_idea_economic_recovery
-					add_idea = HOL_idea_economic_recovery2
-				}
-			}
-			else = {
-				effect_tooltip = {
-					swap_ideas = {
-						remove_idea = HOL_idea_economic_recovery
-						add_idea = HOL_idea_economic_recovery2
-					}
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = HOL_trade_missions
-		icon = GFX_goal_AST_new_markets
-		cost = 5
-
-		relative_position_id = HOL_drop_golden_standard
+		relative_position_id = HOL_aftermath_black_monday
 		x = -1
 		y = 1
 
-		available = {
-			has_socialist_government = no
-		}
-		prerequisite = {
-			focus = HOL_drop_golden_standard
-		}
-		ai_will_do = { factor = 100 }
+		cost = 5
 
 		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_trade_missions"
-			country_event = netherlands_focus_events.19
+
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
-		id = HOL_west_indies_as_tradepost
-		icon = GFX_goal_bananas
-		cost = 5
-
-		relative_position_id = HOL_trade_missions
-		x = 0
-		y = 1
-
-		available = {
-			has_socialist_government = no
-		}
+		id = HOL_cut_government_expenditures
+		icon = GFX_goal_generic_austerity_measures
 		prerequisite = {
-			focus = HOL_trade_missions
+			focus = HOL_balance_the_budget
 		}
-		ai_will_do = { factor = 100 }
 
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_west_indies_as_tradepost"
-			add_political_power = 50
-			add_one_random_civilian_factory = yes
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = HOL_loan_to_shell
-		icon = GFX_goal_oil_derrick
-		cost = 5
-
-		relative_position_id = HOL_drop_golden_standard
+		relative_position_id = HOL_balance_the_budget
 		x = 1
 		y = 1
 
-		available = {
-			has_socialist_government = no
-			controls_state = 695
-		}
-		bypass = {
-			NOT = { owns_state = 695 }
-		}
-		prerequisite = {
-			focus = HOL_drop_golden_standard
-		}
-		ai_will_do = { factor = 100 }
+		cost = 5
 
 		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_loan_to_shell"
-			695 = {
-				custom_override_tooltip = {
-					add_building_construction = {
-						type = naval_base
-						level = 1
-						province = {
-							all_provinces = yes
-							limit_to_naval_base = yes
-						}
-						instant_build = yes
-					}
-					tooltip = {
-						localization_key = tooltip_add_naval_base_levels
-						BUILDING = naval_base
-						NUMBER = 1
-					}
-				}
-				add_resource = {
-					type = oil
-					amount = 11
-				}
-			}
+
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
-		id = HOL_loan_to_SBM
-		icon = GFX_focus_generic_aluminum
+		id = HOL_rely_on_germany
+		icon = GFX_goal_German_Investements
+		prerequisite = {
+			focus = HOL_balance_the_budget
+		}
+
+		relative_position_id = HOL_balance_the_budget
+		x = 0
+		y = 2
+
 		cost = 5
 
-		relative_position_id = HOL_loan_to_shell
-		x = 0
+		completion_reward = {
+
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = HOL_combat_deflation
+		icon = GFX_goal_generic_seize_money
+		prerequisite = {
+			focus = HOL_cut_government_expenditures
+			focus = HOL_rely_on_germany
+		}
+
+		relative_position_id = HOL_rely_on_germany
+		x = 1
 		y = 1
 
-		available = {
-			has_socialist_government = no
-			controls_state = 309
-		}
-		bypass = {
-			NOT = { owns_state = 309 }
-		}
-		prerequisite = {
-			focus = HOL_loan_to_shell
-		}
-		ai_will_do = { factor = 100 }
-
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_loan_to_SBM"
-			add_resource = {
-				type = aluminium
-				amount = 40
-				state = 309
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = HOL_precrisis_export_rates
-		icon = GFX_goal_generic_positive_trade_relations_gold
 		cost = 5
 
-		relative_position_id = HOL_drop_golden_standard
-		x = 0
-		y = 3
-
-		available = {
-			has_socialist_government = no
-		}
-		prerequisite = {
-			focus = HOL_west_indies_as_tradepost
-		}
-		prerequisite = {
-			focus = HOL_loan_to_SBM
-		}
-		ai_will_do = { factor = 100 }
 		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_precrisis_export_rates"
-			add_one_random_civilian_factory = yes
-			add_one_random_civilian_factory = yes
-			swap_ideas = {
-				remove_idea = HOL_idea_abandoned_goldstandard
-				add_idea = HOL_idea_abandoned_goldstandard2
-			}
+
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
 		id = HOL_werkverschaffing
-		icon = GFX_goal_economic_control
-		cost = 5
-
-		relative_position_id = HOL_aftermath_black_monday
-		x = 2
-		y = 1
-
-		available = {
-			OR = {
-				has_completed_focus = HOL_work_with_LSP
-				has_completed_focus = HOL_CNA_on_its_own
-			}
-		}
-		prerequisite = {
-			focus = HOL_aftermath_black_monday
-		}
-		mutually_exclusive = {
-			focus = HOL_public_works
-			focus = HOL_drop_golden_standard
-			focus = HOL_defense_spending_spree
-		}
-		ai_will_do = { factor = 100 }
-
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_werkverschaffing"
-			add_ideas = HOL_idea_werkverschaffing
-			if = {
-				limit = { has_idea = HOL_idea_economic_recovery }
-				swap_ideas = {
-					remove_idea = HOL_idea_economic_recovery
-					add_idea = HOL_idea_economic_recovery2
-				}
-			}
-			else = {
-				effect_tooltip = {
-					swap_ideas = {
-						remove_idea = HOL_idea_economic_recovery
-						add_idea = HOL_idea_economic_recovery2
-					}
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = HOL_cut_unemployment_subsidies
-		icon = GFX_goal_generic_seize_money
-		cost = 5
-
-		relative_position_id = HOL_werkverschaffing
-		x = -1
-		y = 1
-
-		available = {
-			has_socialist_government = no
-		}
-		prerequisite = {
-			focus = HOL_werkverschaffing
-		}
-		ai_will_do = { factor = 100 }
-
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_cut_unemployment_subsidies"
-			add_stability = -0.05
-			add_one_random_civilian_factory = yes
-		}
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = HOL_kill_workplace_regulations
-		icon = GFX_goal_generic_crush_unions
-		cost = 5
-
-		relative_position_id = HOL_cut_unemployment_subsidies
-		x = 0
-		y = 1
-
-		available = {
-			has_socialist_government = no
-		}
-		prerequisite = {
-			focus = HOL_cut_unemployment_subsidies
-		}
-		ai_will_do = { factor = 100 }
-
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_kill_workplace_regulations"
-			add_stability = -0.05
-			add_one_random_civilian_factory = yes
-		}
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = HOL_country_of_canals
-		icon = GFX_focus_hol_the_zuiderzee_works
-		cost = 5
-
-		relative_position_id = HOL_werkverschaffing
-		x = 1
-		y = 1
-
-		available = {
-			has_socialist_government = no
-		}
-		prerequisite = {
-			focus = HOL_werkverschaffing
-		}
-		ai_will_do = { factor = 100 }
-
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_country_of_canals"
-			every_owned_state = {
-				limit = {
-					is_core_of = ROOT
-					is_controlled_by = ROOT
-					is_in_home_area = yes
-					free_building_slots = { building = infrastructure size > 0 }
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = HOL_park_in_every_town
-		icon = GFX_goal_trees
-		cost = 5
-
-		relative_position_id = HOL_country_of_canals
-		x = 0
-		y = 1
-
-		available = {
-			has_socialist_government = no
-		}
-		prerequisite = {
-			focus = HOL_country_of_canals
-		}
-		ai_will_do = { factor = 100 }
-
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_park_in_every_town"
-			add_political_power = 30
-			add_stability = 0.05
-			swap_ideas = {
-				remove_idea = HOL_idea_werkverschaffing
-				add_idea = HOL_idea_werkverschaffing2
-			}
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = HOL_less_unemployment
 		icon = GFX_goal_workers_for_business
-		cost = 5
-
-		relative_position_id = HOL_werkverschaffing
-		x = 0
-		y = 3
-
-		available = {
-			has_socialist_government = no
-		}
-		prerequisite = {
-			focus = HOL_kill_workplace_regulations
-		}
-		prerequisite = {
-			focus = HOL_park_in_every_town
-		}
-		ai_will_do = { factor = 100 }
-
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_less_unemployment"
-			add_one_random_civilian_factory = yes
-			add_one_random_civilian_factory = yes
-			swap_ideas = {
-				remove_idea = HOL_idea_werkverschaffing2
-				add_idea = HOL_idea_werkverschaffing3
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = HOL_defense_spending_spree
-		icon = GFX_goal_munitions_factories
-		cost = 5
-
-		relative_position_id = HOL_aftermath_black_monday
-		x = 6
-		y = 1
-
-		available = {
-			OR = {
-				has_completed_focus = HOL_alliance_of_the_right
-				has_authoritarian_government = yes
-			}
-		}
 		prerequisite = {
 			focus = HOL_aftermath_black_monday
 		}
-		mutually_exclusive = {
-			focus = HOL_public_works
-			focus = HOL_drop_golden_standard
-			focus = HOL_werkverschaffing
-		}
-		ai_will_do = { factor = 100 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_defense_spending_spree"
-			add_political_power = -25
-			add_ideas = HOL_idea_defense_spending_spree
-			if = {
-				limit = { has_idea = HOL_idea_economic_recovery }
-				swap_ideas = {
-					remove_idea = HOL_idea_economic_recovery
-					add_idea = HOL_idea_economic_recovery2
-				}
-			}
-			else = {
-				effect_tooltip = {
-					swap_ideas = {
-						remove_idea = HOL_idea_economic_recovery
-						add_idea = HOL_idea_economic_recovery2
-					}
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = HOL_factory_building
-		icon = GFX_goal_factory_complex
-		cost = 5
-
-		relative_position_id = HOL_defense_spending_spree
-		x = -1
-		y = 1
-
-		available = {
-			has_socialist_government = no
-		}
-		prerequisite = {
-			focus = HOL_defense_spending_spree
-		}
-		ai_will_do = { factor = 100 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_factory_building"
-			add_one_random_military_factory = yes
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = HOL_draft_able_unemployed
-		icon = GFX_goal_forced_con
-		cost = 5
-
-		relative_position_id = HOL_factory_building
-		x = 0
-		y = 1
-
-		available = {
-			has_socialist_government = no
-		}
-		prerequisite = {
-			focus = HOL_factory_building
-		}
-		ai_will_do = { factor = 100 }
-
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_draft_able_unemployed"
-			add_stability = -0.05
-			add_one_random_military_factory = yes
-		}
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = HOL_rhine_line
-		icon = GFX_goal_generic_construct_military
-		cost = 5
-
-		relative_position_id = HOL_defense_spending_spree
-		x = 1
-		y = 1
-
-		available = {
-			has_socialist_government = no
-			controls_province = 9498
-			controls_province = 11456
-		}
-		prerequisite = {
-			focus = HOL_defense_spending_spree
-		}
-		ai_will_do = { factor = 100 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_rhine_line"
-			7 = {
-				custom_override_tooltip = {
-					add_building_construction = {
-						type = bunker
-						level = 3
-						instant_build = yes
-						province = 9498
-					}
-					tooltip = {
-						localization_key = tooltip_add_building_on_victory_point
-						BUILDING = bunker
-						NUMBER = 3
-						VP = 9498
-					}
-				}
-			}
-			866 = {
-				custom_override_tooltip = {
-					add_building_construction = {
-						type = bunker
-						level = 3
-						instant_build = yes
-						province = 11456
-					}
-					tooltip = {
-						localization_key = tooltip_add_building_on_victory_point
-						BUILDING = bunker
-						NUMBER = 3
-						VP = 11456
-					}
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = HOL_finish_fortress_holland
-		icon = GFX_goal_generic_media_controls
-		cost = 5
-
-		relative_position_id = HOL_rhine_line
-		x = 0
-		y = 1
-
-		available = {
-			has_socialist_government = no
-			866 = { is_owned_and_controlled_by = ROOT }
-		}
-		prerequisite = {
-			focus = HOL_rhine_line
-		}
-		ai_will_do = { factor = 100 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_finish_fortress_holland"
-			add_political_power = 75
-			swap_ideas = {
-				remove_idea = HOL_idea_defense_spending_spree
-				add_idea = HOL_idea_defense_spending_spree2
-			}
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_RESISTANCE }
-	}
-
-	focus = {
-		id = HOL_more_spending_power
-		icon = GFX_JBS_goal_syria_coins
-		cost = 5
-
-		relative_position_id = HOL_defense_spending_spree
-		x = 0
-		y = 3
-
-		available = {
-			has_socialist_government = no
-		}
-		prerequisite = {
-			focus = HOL_finish_fortress_holland
-		}
-		prerequisite = {
-			focus = HOL_draft_able_unemployed
-		}
-		ai_will_do = { factor = 100 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_more_spending_power"
-			add_one_random_civilian_factory = yes
-			add_one_random_civilian_factory = yes
-			swap_ideas = {
-				remove_idea = HOL_idea_defense_spending_spree2
-				add_idea = HOL_idea_defense_spending_spree3
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
-	}
-
-	### Recovery from Black Monday branch ###
-
-	focus = {
-		id = HOL_recovery_from_black_monday
-		icon = GFX_focus_generic_support_the_left_right
-		cost = 10
 
 		relative_position_id = HOL_aftermath_black_monday
-		x = 0
-		y = 5
-
-		available = {
-			has_socialist_government = no
-			NOT = { has_idea = HOL_idea_instability }
-		}
-		prerequisite = {
-			focus = HOL_privatization_of_projects
-			focus = HOL_precrisis_export_rates
-			focus = HOL_less_unemployment
-			focus = HOL_more_spending_power
-		}
-		ai_will_do = { factor = 100 }
-
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_recovery_from_black_monday"
-			remove_ideas = HOL_idea_economic_recovery2
-		}
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = HOL_eastern_industrialization
-		icon = GFX_goal_generic_construct_civ_factory
-		cost = 6
-
-		relative_position_id = HOL_recovery_from_black_monday
-		x = -3
-		y = 1
-
-		available = {
-			has_socialist_government = no
-		}
-		prerequisite = {
-			focus = HOL_recovery_from_black_monday
-		}
-		ai_will_do = { factor = 100 }
-
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_eastern_industrialization"
-			random_owned_controlled_state = {
-				prioritize = { 866 }
-				limit = {
-					is_core_of = ROOT
-					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
-					is_valid_state_for_development = yes
-					prefer_home_area_states_unless_filled = yes
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = HOL_northern_industrialization
-		icon = GFX_goal_generic_construct_civ_factory
-		cost = 6
-
-		relative_position_id = HOL_recovery_from_black_monday
-		x = -1
-		y = 1
-
-		available = {
-			has_socialist_government = no
-		}
-		prerequisite = {
-			focus = HOL_recovery_from_black_monday
-		}
-		ai_will_do = { factor = 100 }
-
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_northern_industrialization"
-			random_owned_controlled_state = {
-				prioritize = { 36 }
-				limit = {
-					is_core_of = ROOT
-					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
-					is_valid_state_for_development = yes
-					prefer_home_area_states_unless_filled = yes
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = HOL_dutch_arms_industry
-		icon = GFX_goal_generic_construct_mil_factory
-		cost = 6
-
-		relative_position_id = HOL_recovery_from_black_monday
-		x = -2
-		y = 2
-
-		available = {
-			has_socialist_government = no
-		}
-		prerequisite = {
-			focus = HOL_eastern_industrialization
-		}
-		prerequisite = {
-			focus = HOL_northern_industrialization
-		}
-		ai_will_do = { factor = 100 }
-
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_dutch_arms_industry"
-			random_owned_controlled_state = {
-				prioritize = { 7 }
-				limit = {
-					is_core_of = ROOT
-					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
-					is_valid_state_for_development = yes
-					prefer_home_area_states_unless_filled = yes
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = HOL_subs_philips
-		icon = GFX_focus_hol_philips
-		cost = 6
-
-		relative_position_id = HOL_recovery_from_black_monday
-		x = 1
-		y = 1
-
-		available = {
-			has_socialist_government = no
-		}
-		prerequisite = {
-			focus = HOL_recovery_from_black_monday
-		}
-		ai_will_do = { factor = 100 }
-
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_subs_philips"
-			add_one_random_civilian_factory = yes
-			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = improves_industrial_concern_tt
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = philips
-					add_idea = philips_upgraded
-				}
-			}
-			hidden_effect = {
-				every_country = {
-					limit = { has_idea = philips }
-					add_ideas = philips_upgraded
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = HOL_subs_spyker
-		icon = GFX_HOL_spyker
-		cost = 6
-
-		relative_position_id = HOL_recovery_from_black_monday
 		x = 3
 		y = 1
 
-		available = {
-			has_socialist_government = no
-		}
-		prerequisite = {
-			focus = HOL_recovery_from_black_monday
-		}
-		ai_will_do = { factor = 100 }
+		cost = 5
 
 		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_subs_spyker"
-			add_one_random_military_factory = yes
-			custom_effect_tooltip = tooltip_white_line
-			if = {
-				limit = { has_dlc_aat = no }
-				custom_effect_tooltip = improves_designer_tt
-				effect_tooltip = {
-					swap_ideas = {
-						remove_idea = spyker
-						add_idea = spyker_upgraded
-					}
-				}
-				hidden_effect = {
-					every_country = {
-						limit = { has_idea = spyker }
-						add_ideas = spyker_upgraded
-					}
-				}
-			}
-			else = {
-				mio:HOL_spyker_organisation = {
-					add_mio_size = 1
-					add_mio_funds = 500
-				}
-				every_subject_country = {
-					limit = { has_military_industrial_organization = HOL_spyker_organisation }
-					mio:HOL_spyker_organisation = {
-						add_mio_size = 1
-						add_mio_funds = 500
-					}
-				}
-			}
+
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
-		id = HOL_subs_werkspoor
-		icon = GFX_focus_generic_tank_production
-		cost = 6
-
-		relative_position_id = HOL_recovery_from_black_monday
-		x = 2
-		y = 2
-
-		available = {
-			has_socialist_government = no
-		}
+		id = HOL_finish_rijksweg_twelwe
+		icon = GFX_goal_generic_road_construction
 		prerequisite = {
-			focus = HOL_subs_spyker
+			focus = HOL_werkverschaffing
 		}
-		prerequisite = {
-			focus = HOL_subs_philips
-		}
-		ai_will_do = { factor = 100 }
+
+		relative_position_id = HOL_werkverschaffing
+		x = -1
+		y = 1
+
+		cost = 5
 
 		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_subs_werkspoor"
-			add_one_random_military_factory = yes
-			custom_effect_tooltip = tooltip_white_line
-			if = {
-				limit = { has_dlc_aat = no }
-				custom_effect_tooltip = improves_designer_tt
-				effect_tooltip = {
-					swap_ideas = {
-						remove_idea = werkspoor
-						add_idea = werkspoor_upgraded
-					}
-				}
-				hidden_effect = {
-					every_country = {
-						limit = { has_idea = werkspoor }
-						add_ideas = werkspoor_upgraded
-					}
-				}
-			}
-			else = {
-				mio:HOL_werkspoor_organisation = {
-					add_mio_size = 1
-					add_mio_funds = 500
-				}
-				every_subject_country = {
-					limit = { has_military_industrial_organization = HOL_werkspoor_organisation }
-					mio:HOL_werkspoor_organisation = {
-						add_mio_size = 1
-						add_mio_funds = 500
-					}
-				}
-			}
+
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
-		id = HOL_booming_economy
-		icon = GFX_goal_generic_consumer_goods
-		cost = 6
+		id = HOL_ban_contractless_work
+		icon = GFX_goal_workers_rights
+		prerequisite = {
+			focus = HOL_werkverschaffing
+		}
 
-		relative_position_id = HOL_recovery_from_black_monday
+		relative_position_id = HOL_werkverschaffing
+		x = 1
+		y = 1
+
+		cost = 5
+
+		completion_reward = {
+
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = HOL_invite_guest_workers
+		icon = GFX_goal_Winterhilfe
+		prerequisite = {
+			focus = HOL_ban_contractless_work
+		}
+		prerequisite = {
+			focus = HOL_finish_rijksweg_twelwe
+		}
+
+		relative_position_id = HOL_finish_rijksweg_twelwe
+		x = 1
+		y = 1
+
+		cost = 5
+
+		completion_reward = {
+
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = HOL_utilize_our_crown_jewel
+		icon = GFX_goal_JAP_target_indonesia
+		prerequisite = {
+			focus = HOL_werkverschaffing
+		}
+
+		relative_position_id = HOL_werkverschaffing
+		x = 3
+		y = 1
+
+		cost = 5
+
+		completion_reward = {
+
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = HOL_oil_for_new_buyers
+		icon = GFX_goal_generic_pipeline
+		prerequisite = {
+			focus = HOL_utilize_our_crown_jewel
+		}
+
+		relative_position_id = HOL_utilize_our_crown_jewel
 		x = 0
-		y = 2
+		y = 1
 
-		available = {
-			has_socialist_government = no
-			num_of_controlled_factories > 50
-		}
-		prerequisite = {
-			focus = HOL_recovery_from_black_monday
-		}
-		ai_will_do = { factor = 100 }
+		cost = 5
 
 		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed HOL_booming_economy"
-			add_ideas = HOL_idea_booming_economy
+
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
+
+	### Recovery from Black Monday branch ###
 
 	### Army foci ###
 
