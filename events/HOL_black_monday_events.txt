@@ -1,0 +1,16 @@
+﻿# NETHERLANDS BLACK MONDAY EVENTS
+
+add_namespace = netherlands_black_monday_events
+
+country_event = { #Werkfonds Established
+	id = netherlands_black_monday_events.1
+	title = netherlands_black_monday_events.1.t
+	desc = netherlands_black_monday_events.1.d
+	picture = GFX_report_event_HOL_jordaanoproer
+
+	is_triggered_only = yes
+
+	option = {
+		name = netherlands_black_monday_events.1.a
+	}
+}

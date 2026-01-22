@@ -1,9 +1,9 @@
 
 HOL_rw_economic_dynmod = {
 	enable = {
-		always = no
+		always = yes
 	}
-	icon = HOL_black_monday
+	icon = "GFX_idea_HOL_black_monday"
 	stability_factor = HOL_rw_stability_var
 	production_factory_max_efficiency_factor = HOL_rw_prod_fact_max_eff_var
 	industrial_capacity_factory = HOL_rw_ind_cap_var

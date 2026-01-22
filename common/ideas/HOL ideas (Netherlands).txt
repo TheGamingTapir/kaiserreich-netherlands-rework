@@ -68,11 +68,11 @@ ideas = {
 			picture = HOL_black_monday
 			allowed = { always = no }
 			modifier = {
-				stability_factor = -0.2
-				production_factory_max_efficiency_factor = -0.20
-				industrial_capacity_factory = -0.5
-				production_speed_buildings_factor = -0.6
-			}
+				production_factory_max_efficiency_factor = -0.15
+				industrial_capacity_factory = -0.15
+				production_speed_buildings_factor = -0.5
+				consumer_goods_factor = 0.2
+				}
 		}
 
 		HOL_idea_public_works = {

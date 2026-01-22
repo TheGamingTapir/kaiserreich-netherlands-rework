@@ -37,14 +37,18 @@
  HOL_waining_coalition_desc: "WIP"
 
  HOL_waining_coaliton_tt: "§tShould coalition cohesion become to low, the coaliton will collapse and trigger early elections.§!"
- HOL_waining_coalition_event_tt: "§LThe new economic crisis has made the already uneasy coalition even more shaky, a new mechanic will unlock in the decisions tab to keep the coalition together.§!"
+ HOL_waining_coalition_event_tt: "\n§tThe new economic crisis has made the already uneasy coalition even more shaky, a new mechanic will unlock in the decisions tab to keep the coalition together.§!"
 
  HOL_coalition_cohesion: "The Waining Coalition"
  HOL_coalition_cohesion_desc: "The current coalition of the VDB, LSP, ARP and the RKSP-CHU has been shaky recently, there has been infighting on how to approach the new economic crisis that has dawned upon the world and upon us.\n\nWe need to keep the coalition together at least until the start of 1937.\n\nCoalition Cohesion:  §O[?HOL_coalition_cohesion|0%%]§!"
  HOL_cohesion_mission_nm: "Time Until 1937"
  HOL_coalition_cohesion_check_tt: "Coalition cohesion falls below §O25§!"
  HOL_increase_cohesion_decision: "Reassure Coalition Partners"
- HOL_cc_increase_15_tt: "This will increase coalition cohesion by §O15§! points"
+ HOL_cc_increase_15_tt: "This will §Gincrease§! coalition cohesion by §O15§! points"
+ HOL_cc_decrease_20_tt: "This will §Rdecrease§! coalition cohesion by §O20§! points"
+ HOL_cc_decrease_10_tt: "This will §Rdecrease§! coalition cohesion by §O10§! points"
+
+
 
  HOL_collapsed_coalition: "Collapsed Coalition"
  HOL_collapsed_coalition_desc: "WIP"
@@ -69,6 +73,8 @@
  HOL_idea_public_works: "Public Works"
  HOL_idea_public_works_desc: "If we can throw enough men and women at a problem, it is sure to be solvable."
 
+ HOL_werkfonds_dynmod_tt: "Modify §YEffects of Black Monday§! by:\n Consumer Goods Factories factor: §Y+10.0%§!\n Construction Speed: §G+3%§!\n Production Efficiency Cap: §R-5%§!\n\n"
+ HOL_werkfonds_decisisons_tt: "£decision_icon_small §LThis will enable decisions to construct public works throught the Werkfonds§!"
 ### Naval ideas ###
  HOL_idea_wolfpack: "Submarine Wolfpacks"
  HOL_idea_lone_wolf: "Lone Wolf Operations"
@@ -137,6 +143,8 @@
  HOL_the_united_state_desc: "We ought to show unity at all times. Let us stand united as Dutchmen versus the world."
  HOL_aftermath_black_monday: "Aftermath of Black Monday"
  HOL_aftermath_black_monday_desc: "Black Monday shockwaves have hit the Dutch economy hard. The government will be forced to take immediate and drastic action to avoid the economy breaking down completely."
+ HOL_werkfonds: "Werkfonds"
+ HOL_graanregeling: "Graanregeling"
  HOL_drop_the_gold_standard: "Drop the Gold Standard"
  HOL_extend_unemployment_subsidies: "Extend Unemployment Subsidies"
  HOL_free_trade: "Free Trade"
@@ -1773,6 +1781,11 @@
  netherlands_coalition_events.2.t: "Coalition Has Prevailed"
  netherlands_coalition_events.2.d: "WIP"
  netherlands_coalition_events.2.a: "Yippee!"
+
+ ### Black Monday Events 
+ netherlands_black_monday_events.1.t: "Establishment of the Werkfonds"
+ netherlands_black_monday_events.1.d: "WIP"
+ netherlands_black_monday_events.1.a: "WIP"
 
 ### Custom Tooltips ###
  HOL_vesting_holland_begin: "Construction work on the defensive lines defending Holland shall begin and will take two years."

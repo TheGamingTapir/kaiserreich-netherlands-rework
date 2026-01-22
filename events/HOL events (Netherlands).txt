@@ -27,15 +27,13 @@ country_event = { #Berlin stock crisis
 			remove_ideas = HOL_minor_economic_woes
 			add_ideas = HOL_waining_coalition 
 			set_country_flag = HOL_waining_coalition_flag
-			add_to_variable = { HOL_coalition_cohesion = 95 }
+			add_to_variable = { HOL_coalition_cohesion = 80 }
 			activate_mission = HOL_cohesion_mission
 			complete_national_focus = HOL_aftermath_black_monday
+			add_stability = -0.15
 			add_dynamic_modifier = {
 	            modifier = HOL_rw_economic_dynmod
             }
-			set_variable = {
-                HOL_rw_stability_var = -0.15
-			}
 			set_variable = {
                 HOL_rw_prod_fact_max_eff_var = -0.15
 			}
@@ -55,9 +53,9 @@ country_event = { #Berlin stock crisis
 		log = "[GetLogInfo]: event netherlands_starting_events.2 option netherlands_starting_events.2.a"
 		name = netherlands_starting_events.2.a
 		effect_tooltip = { 
+			add_stability = -0.15
 			add_ideas = HOL_idea_crisis 
 			custom_effect_tooltip = HOL_waining_coalition_event_tt
-			complete_national_focus = HOL_aftermath_black_monday
 		}
 		
 	}

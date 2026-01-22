@@ -75,3 +75,54 @@ HOL_coalition_cohesion = {
 		ai_will_do = { factor = 1000 }
 	}
 }
+HOL_black_monday_decisions = {
+	HOL_bm_kralingse_bos = {
+		name = HOL_bm_kralingse_bos
+		icon = cement_mixer
+
+		priority = 100
+
+		cost = 10
+
+		days_remove = 30
+
+		allowed = {
+			original_tag = HOL
+			has_completed_focus = HOL_werkfonds
+		}
+
+		modifier = {
+           civilian_factory_use = 2
+        }
+
+		complete_effect = {
+			7 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+        }
+
+		ai_will_do = { factor = 1000 }
+	}
+	#valkenburg airport
+	#valleikanaal 
+	#linthorst homanpolder
+	#julianapark
+	#twentekanaal
+	#zwarte broek polder
+	#stadspark sittard
+	#rijswijk haven
+	#nijmegen nieuwe haven uitbereiding
+	#oranjezon kanaal
+	#woningbouw maastricht
+	#verkeersweg den bosch-nijmegen
+	#van starkenborghkanaal groningen
+	#julianakanaal en gouwekanaal
+	#biesboschpolder dordecht
+	#afwateringskanaal boxtel
+	#zandafgraverij giekerk
+	#
+}

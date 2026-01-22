@@ -4182,22 +4182,81 @@ focus_tree = {
 	}
 
 	focus = {
+		id = HOL_werkfonds
+		icon = GFX_goal_generic_public_transport
+		prerequisite = {
+			focus = HOL_aftermath_black_monday
+		}
+
+		relative_position_id = HOL_aftermath_black_monday
+		x = 1
+		y = 1
+
+		cost = 5
+
+		completion_reward = {
+			add_stability = 0.03
+		    add_to_variable = {
+                HOL_rw_cons_goods_var = 0.1
+			}
+			add_to_variable = {
+                HOL_rw_prod_sp_blds_var = 0.03
+			}
+			add_to_variable = {
+                HOL_rw_prod_fact_max_eff_var = -0.05
+				tooltip = HOL_werkfonds_dynmod_tt
+			}
+			country_event = {
+                id = netherlands_black_monday_events.1
+                days = 1
+	        }
+
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = HOL_graanregeling
+		icon = GFX_focus_generic_agriculture
+		prerequisite = {
+			focus = HOL_aftermath_black_monday
+		}
+
+		relative_position_id = HOL_aftermath_black_monday
+		x = -1
+		y = 1
+
+		cost = 5
+
+		completion_reward = {
+			add_to_variable = { HOL_coalition_cohesion = -10 }
+			custom_effect_tooltip = HOL_cc_decrease_10_tt
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
 		id = HOL_drop_the_gold_standard
 		icon = GFX_focus_HOL_abandon_gold_standard
 		prerequisite = {
-			focus = HOL_aftermath_black_monday
+			focus = HOL_graanregeling
+		}
+		prerequisite = {
+			focus = HOL_werkfonds
 		}
 		mutually_exclusive = {
 			focus = HOL_balance_the_budget
 		}
 
 		relative_position_id = HOL_aftermath_black_monday
-		x = -3
-		y = 1
+		x = -2
+		y = 2
 
 		cost = 5
 
 		completion_reward = {
+			add_to_variable = { HOL_coalition_cohesion = -20 }
+			custom_effect_tooltip = HOL_cc_decrease_20_tt
 
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -4265,15 +4324,18 @@ focus_tree = {
 		id = HOL_balance_the_budget
 		icon = GFX_goal_generic_stable_government
 		prerequisite = {
-			focus = HOL_aftermath_black_monday
+			focus = HOL_graanregeling
+		}
+		prerequisite = {
+			focus = HOL_werkfonds
 		}
 		mutually_exclusive = {
 			focus = HOL_drop_the_gold_standard
 		}
 
 		relative_position_id = HOL_aftermath_black_monday
-		x = -1
-		y = 1
+		x = 0
+		y = 2
 
 		cost = 5
 
@@ -4352,9 +4414,15 @@ focus_tree = {
 		x = 3
 		y = 1
 
+		available = {
+			has_completed_focus = HOL_werkfonds	
+        
+		}
+
 		cost = 5
 
 		completion_reward = {
+			custom_effect_tooltip = HOL_werkfonds_decisisons_tt
 
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
