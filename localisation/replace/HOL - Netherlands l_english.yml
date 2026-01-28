@@ -28,7 +28,7 @@
  HOL_senate_deadlock: "Senate Deadlock"
  HOL_senate_deadlock_desc: "The Dutch senate, or Eerste Kamer, has been in a deadlock with parliament since the last senate elections in 1935. It saw major victories by the far-right and far-left parties.\n\nTheir election has now created an impasse for the liberal-conservative coalition, as motions need to pass through both parliament and the senate in order to become laws; which is now nigh impossible with the radicals blocking every attempt by the government to implement new laws.\n\nWhat also isn’t helping the situation is that the senate has always been ripe with corruption, with even senators from the coalition parties voting against their laws because of lobbyists and radical threats."
  HOL_minor_economic_woes: "Minor Economic Woes"
- HOL_minor_economic_woes_desc: "The Dutch economy has always been a resilient one, coming out of the Great War almost unscathed. But the ripples of the 20s still haunt the walls of the Dutch economy, with the collapse of both the British and French empires the Dutch had to make deals with the newly established German colonies. There was also a minor shock to the Dutch East Indies trade when the Germans intervened in China, the Dutch East Indies had been selling goods and importing laborers from China for decades and the intervention halted most of that for a little while. After that things stabilized until the Great Depression happened in the United States which rippled out into Dutch markets. While it was able to largely stabilize the economic situation, some trading businesses collapsed and there were minor lay-offs. Now the Dutch economy is simply dealing with the last of these ripples while going into the new year of 1936."
+ HOL_minor_economic_woes_desc: "The Dutch economy has always been a resilient one, coming out of the Great War almost unscathed. But the ripples of the 20s still haunt the walls of the Dutch economy, with the collapse of both the British and French empires the Dutch had to make deals with the newly established German colonies. There was also a minor shock to the Dutch East Indies trade when the Germans intervened in China, the Dutch East Indies had been selling goods and importing laborers from China for decades and the intervention halted most of that for a little while.\n\nAfter that things stabilized until the Great Depression happened in the United States which rippled out into Dutch markets. While it was able to largely stabilize the economic situation, some trading businesses collapsed and there were minor lay-offs. Now the Dutch economy is simply dealing with the last of these ripples while going into the new year of 1936."
  HOL_verzuiling: "Verzuiling"
  HOL_verzuiling_desc: "Ever since the constitution of 1848 that introduced the Dutch people to democracy, they have been divided over its usage. Verzuiling, or pillarisation, is the struggle for the four main factions of the Dutch political scene to vie for power and implement their laws while pushing back against the other pillars.\n\nThe four main factions are: the Socialists, the Liberals and then the Conservatives that are split into their own two factions, the Protestants and the Catholics. They have been fighting and compromising for decades, but these last ten years have only heated their debates. With the strong syndicalist rise and old conservative order coming to a head in western Europe, the Netherlands is squished right in between these two blocs, and has to carve out its own space in the middle while not upsetting either side.\n\nMany people find the term Verzuiling to be an outdated one, as both the left and right have long since devolved into numerous factions of their own.The socialists are divided on the implementation of democracy since the syndicalist surge of the 20s. The right is more unified but has seen nationalist fervour rising in its ranks, especially with the formation of the NHU in 1932, that has shown itself to be almost a fifth column within Dutch society.\n\nThe Liberal-Conservative centre bloc that has held onto power these last few decades have shown strong resistance against the left and right-wing elements within the Dutch political scene, introducing the Ambtenarenverbod and not accepting any coalition talks with either the social-democratic SDAP or with the ultra-religious SGP."
 
@@ -528,22 +528,22 @@
  hol_friendship_with_belgium: "Friendship with Belgium"
 
 ### Parties ###
- HOL_totalist_party: "KPH"
- HOL_totalist_party_long: "Kommunistische Partij Holland (Communist Party Holland)\n§LWIP§!"
+ HOL_totalist_party: "KPN"
+ HOL_totalist_party_long: "Kommunistische Partij Nederland (Communist Party Netherlands)\n§LOriginally founded as the Social-Democratic Party in 1909, it split off from the SDAP, which they have seen as their rivals since, and was always a host to many Socialist radicals from the Dutch leftist political scene. It was renamed later from the SDP to the KPN after the October Revolution and joined the Internationale when the revolutions in France and Britain occured. They were first elected to parliament in 1918 with only a few seats, but as socialist influence in the world increased, so did the popularity of the KPN and has since become the most radical factions of the Dutch leftist parties, but has achieved little success policy wise in parliament.§!"
  HOL_syndicalist_party: "NAS"
- HOL_syndicalist_party_long: "Nationaal Arbeids-Secretariaat (National Workers Secretariat)\n§LWIP§!"
+ HOL_syndicalist_party_long: "Nationaal Arbeids-Secretariaat (National Workers Secretariat)\n§LOne of the oldest Syndicalist parties in the world, the NAS was founded in 1893 and was an early supporter of workers unions in the Netherlands. It emerged as a unified front of workers union, formed by a former anarchist party, the SDB, of which some elements are still present within the party. The NAS later evolved into a political party, welcoming many political refugees from the SDAP. In 1923 the NAS was almost split in two, when certain union executives wanting to form their independent organisation. but Henk Sneevliet, the party leader, managed to convince them to stay. The NAS has also been one of the only public supporters of Indonesian autonomy or even out right indepedence. They also have strong ties to the Third Internationale and to the leaders of the October Revolution.§!"
  HOL_radical_socialist_party: "RSAP"
- HOL_radical_socialist_party_long: "Revolutionair-Socialistische Arbeiderspartij (Socialist Revolutionary Workers Party)\n§LWIP§!"
+ HOL_radical_socialist_party_long: "Revolutionair-Socialistische Arbeiderspartij (Socialist Revolutionary Workers Party)\n§LThis party is a relatively new party, having been created in 1931 as a merger of the Revolutionary-Socialist Party and the Independent Socialist Party, but has nontheless shown themselves to be a capable party, which has gotten plenty seats in parliament, and cooperating with the other socialist parties to hamper the coalition parties in the senate since the last elections. But it tries to distance itself from the Third Internationale, wanting to achieve their goals in a more Dutch way, still through revolution preferably but without too much political influence from the outside. They have also shown to be the only radical leftist party willing at all to cooperate with the SDAP and VDB on any matters in parliament, but it is yet to be seen if this peaceful co-existence with the centre left can continue or not.§!"
  HOL_social_democrat_party: "SDAP"
- HOL_social_democrat_party_long: "Sociaal-Democratische Arbeiderspartij (Social Democratic Workers Party)\n§LWIP§!"
+ HOL_social_democrat_party_long: "Sociaal-Democratische Arbeiderspartij (Social Democratic Workers Party)\n§LThe SDAP was founded in 1894 by members of the social-anarchist SDB, very quickly they had gained traction, achieving two seats in the 1897 parliamentary elections. Although former party leader, Jelle Troelstra, did try to mimic the Russian revolution at home in 1918, his attempt failed miserably and since then the party has taken a more democratic and peaceful approach to politics, sometimes willing to cooperate with the centre-right, but often times stil refusing to compromise on social issues. Of all the leftist parties they are the only one not calling for revolution like in Britain or France, but instead believing that the ideals of Marx can be achieved democratically throught parliament but that popular support simply isn't there yet.§!"
  HOL_social_liberal_party: "VDB"
  HOL_social_liberal_party_long: "Vrijzinnig-Democratische Bond (Liberal-Democratic Bond)\n§LWIP§!"
  HOL_market_liberal_party: "LSP"
  HOL_market_liberal_party_long: "Liberale Staatspartij 'De Vrijheidsbond' (Liberal State Party 'The Freedom Bond')\n§LWIP§!"
  HOL_social_conservative_party: "ARP"
  HOL_social_conservative_party_long: "Anti-Revolutionaire Partij (Anti-Revolutionary Party)\n§LWIP§!"
- HOL_authoritarian_democrat_party: "RKSP/CHU"
- HOL_authoritarian_democrat_party_long: "Rooms Katholieke Staatspartij / Christelijk-Historische Unie \n(Roman-Catholic State Party / Christian Historical Union)\n§LWIP§!"
+ HOL_authoritarian_democrat_party: "RKSP"
+ HOL_authoritarian_democrat_party_long: "Rooms Katholieke Staatspartij (Roman-Catholic State Party)\n§LWIP§!"
  HOL_paternal_autocrat_party: "Huis van Oranje-Nassau"
  HOL_paternal_autocrat_party_long: "Huis van Oranje-Nassau (House of Orange-Nassau)\n§LWIP§!"
  HOL_national_populist_party: "HNU"
@@ -1853,7 +1853,7 @@
 ### Country Names ###
  HOL: "Netherlands"
  HOL_ADJ: "Dutch"
- HOL_DEF: "the Netherlands"
+ HOL_DEF: "the Kingdom of the Netherlands"
 
  HOL_totalist: "Batavian Commune"
  HOL_totalist_DEF: "the Batavian Commune"
@@ -1867,6 +1867,8 @@
  HOL_david_wijnkoop_leader_desc: "§YBorn:§! §LMarch 11th, 1876, in Amsterdam, North Holland, Kingdom of the Netherlands§!"
  HOL_paul_de_groot: "Paul de Groot"
  HOL_paul_de_groot_leader_desc: "§YBorn:§! §LJuly 19th, 1899, in Amsterdam, North Holland, Kingdom of the Netherlands§!"
+ HOL_piet_j_schmidt: "Piet J. Schmidt"
+ HOL_piet_j_schmidt_leader_desc: "§YBorn:§! §LNovember 23rd, 1896, in Arnhem, Gelderland, Kingdom of the Netherlands§!"
  HOL_jacques_de_kadt: "Jacques de Kadt"
  HOL_jacques_de_kadt_leader_desc: "§YBorn:§! §LJuly 30th, 1897, in Oss, North Brabant, Kingdom of the Netherlands§!"
  HOL_antonie_pannekoek: "Antonie Pannekoek"
@@ -2014,3 +2016,6 @@
  HOL_floris_albert_van_heyst_theorist_desc: "§YBorn:§! §LAugust 28th, 1883, in Wijk bij Duurstede, Utrecht, Kingdom of the Netherlands§!"
 
  HOL_anthony_fokker: "Anthony Fokker"
+
+ ### TRAITS
+ HOL_wilhelmina_mother_trait: "Moeder Des Vaderlands"

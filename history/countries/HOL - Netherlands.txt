@@ -2,7 +2,7 @@ capital = 7
 oob = "HOL"
 set_naval_oob = "HOL_naval"
 set_convoys = 400
-set_stability = 0.8
+set_stability = 0.7
 set_war_support = 0.1
 set_research_slots = 3
 starting_train_buffer = 1
@@ -84,8 +84,8 @@ if = {
 }
 
 add_ideas = {
-	HOL_senate_deadlock
 	HOL_verzuiling
+	HOL_senate_deadlock
 	HOL_minor_economic_woes
 	limited_conscription
 	free_trade
@@ -100,14 +100,14 @@ set_politics = {
 }
 
 set_popularities = {
-	totalist = 3
-	syndicalist = 7
-	radical_socialist = 9
-	social_democrat = 22
-	social_liberal = 5
-	market_liberal = 11
-	social_conservative = 17
-	authoritarian_democrat = 22
+	totalist = 5
+	syndicalist = 9
+	radical_socialist = 8
+	social_democrat = 19
+	social_liberal = 8
+	market_liberal = 12
+	social_conservative = 18
+	authoritarian_democrat = 17
 	paternal_autocrat = 0
 	national_populist = 4	
 }
@@ -171,9 +171,10 @@ recruit_character = HOL_juliana_van_orange_nassau
 
 recruit_character = HOL_david_wijnkoop
 recruit_character = HOL_paul_de_groot
+recruit_character = HOL_piet_j_schmidt
+recruit_character = HOL_henk_sneevliet
 recruit_character = HOL_jacques_de_kadt
 recruit_character = HOL_antonie_pannekoek
-recruit_character = HOL_henk_sneevliet
 recruit_character = HOL_willem_drees
 recruit_character = HOL_adriaan_henri_gerhard
 recruit_character = HOL_roelof_kranenburg
