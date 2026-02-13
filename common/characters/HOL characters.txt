@@ -208,6 +208,21 @@ characters = {
 		}
 		country_leader = {
 			desc = HOL_wilhelmina_van_orange_nassau_leader_desc
+			ideology = totalist_subtype
+			traits = { 	HOL_wilhelmina_mother_trait }
+		}
+		country_leader = {
+			desc = HOL_wilhelmina_van_orange_nassau_leader_desc
+			ideology = syndicalist_subtype
+			traits = { 	HOL_wilhelmina_mother_trait }
+		}
+		country_leader = {
+			desc = HOL_wilhelmina_van_orange_nassau_leader_desc
+			ideology = radical_socialist_subtype
+			traits = { 	HOL_wilhelmina_mother_trait }
+		}
+		country_leader = {
+			desc = HOL_wilhelmina_van_orange_nassau_leader_desc
 			ideology = social_democrat_subtype
 			traits = { 	HOL_wilhelmina_mother_trait }
 		}
