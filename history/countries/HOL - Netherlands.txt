@@ -103,48 +103,14 @@ set_popularities = {
 	totalist = 5
 	syndicalist = 9
 	radical_socialist = 8
-	social_democrat = 19
-	social_liberal = 8
+	social_democrat = 18
+	social_liberal = 9
 	market_liberal = 12
 	social_conservative = 18
 	authoritarian_democrat = 17
 	paternal_autocrat = 0
 	national_populist = 4	
 }
-
-country_event = { id = netherlands_starting_events.5 days = 124 } #Worsening Living Standards
-country_event = { id = netherlands_starting_events.6 days = 203 } #The pillars begin to crumble
-country_event = { id = netherlands_starting_events.9 days = 215 } #Rise of the Radical Left
-country_event = { id = netherlands_starting_events.7 days = 224 } #Formation of the Christelijke Nationale Alliantie
-country_event = { id = netherlands_starting_events.3 days = 258 } #Jordaan Riots
-country_event = { id = netherlands_starting_events.8 days = 275 } #The Liberal Crisis
-country_event = { id = netherlands_starting_events.4 days = 291 } #Lijst Links: The VDB-SDAP Electoral Pact
-country_event = { id = netherlands_starting_events.11 days = 370 } #The Death of Van Gybland Oosterhoff
-country_event = { id = netherlands_starting_events.12 days = 439 } #Social Unrest in the Netherlands
-country_event = { id = netherlands_starting_events.13 days = 476 } #Zwolle Massacre
-
-country_event = { id = netherlands_post_election_events.2500 days = 180 } #NAS membership exceeds NVV
-country_event = { id = netherlands_post_election_events.45 days = 609 } #VNH annual landdag in Utrecht upcoming
-country_event = { id = netherlands_post_election_events.20 days = 650 } #Crime on the rise
-country_event = { id = netherlands_post_election_events.54 days = 679 } #Landwacht breaks local strike
-country_event = { id = netherlands_post_election_events.1 days = 788 } #Torching of the binnenhof
-country_event = { id = netherlands_post_election_events.21 days = 788 random_days = 5 } #Alcoholism on the rise
-country_event = { id = netherlands_post_election_events.55 days = 794 } #RNF and Landwacht clash
-country_event = { id = netherlands_post_election_events.60 days = 830 } #CNA schism (CNA ruling alone - NRKSP splits off)
-country_event = { id = netherlands_post_election_events.66 days = 830 } #CNA schism (CNA ruling with others - NRKSP splits off)
-country_event = { id = netherlands_post_election_events.67 days = 830 } #CNA schism (CNA not ruling at all - CNA collapses completely)
-country_event = { id = netherlands_post_election_events.31 days = 865 } #French Nationals apprehended at border
-country_event = { id = netherlands_post_election_events.26 days = 943 } #Malieveld Protests
-country_event = { id = netherlands_post_election_events.52 days = 993 } #Prinsjesdag 1938 - black flags flying
-country_event = { id = netherlands_post_election_events.53 days = 1120 } #Nationaal Herstel newspaper recruits two major journalists
-country_event = { id = netherlands_post_election_events.39 days = 1151 } #Albarda Assassination Attempt
-country_event = { id = netherlands_post_election_events.27 days = 1151 random_days = 3 } #February Strike
-country_event = { id = netherlands_post_election_events.24 days = 1157 } #VNH Welfare in poor areas
-country_event = { id = netherlands_post_election_events.57 days = 1217 } #Military voices support of the VNH
-country_event = { id = netherlands_post_election_events.38 days = 1373 } #Revolutionary Statue painted Oranje-Blanje-Bleu
-country_event = { id = netherlands_post_election_events.56 days = 1407 } #Nationale Jeugdstorm
-country_event = { id = netherlands_post_election_events.30 days = 1613 } #Radio Rood
-country_event = { id = netherlands_post_election_events.68 days = 1718 } #Formation of the PvdA
 
 country_event = { id = netherlands_flavour_events.1 days = 30 } #Switch Timezone?
 country_event = { id = netherlands_flavour_events.2 days = 167 } #Opening of the Waalbrug at Nijmegen

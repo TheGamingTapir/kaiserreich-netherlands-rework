@@ -61,23 +61,17 @@ country_event = { #Berlin stock crisis
 	}
 }
 
-country_event = { #Jordaan Riots
+country_event = { #De Vlugt affair
 	id = netherlands_starting_events.3
 	title = netherlands_starting_events.3.t
 	desc = netherlands_starting_events.3.d
-	picture = GFX_report_event_HOL_jordaanoproer
+	picture = GFX_report_event_HOL_cna_victory_37
 
 	is_triggered_only = yes
 
 	option = {
 		log = "[GetLogInfo]: event netherlands_starting_events.3 option netherlands_starting_events.3.a"
 		name = netherlands_starting_events.3.a
-		add_stability = -0.05
-		add_ideas = HOL_idea_instability
-		add_to_variable = { HOL_coalition_cohesion = 80 }
-		hidden_effect = {
-			country_event = { id = netherlands_starting_events.10 days = 4 random_hours = 96 }
-		}
 	}
 }
 
