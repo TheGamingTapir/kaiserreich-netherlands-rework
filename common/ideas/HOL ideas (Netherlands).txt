@@ -5,7 +5,7 @@ ideas = {
 ##############
 	country = {
 		HOL_senate_deadlock = {
-			picture = SPR_political_violence
+			picture = HOL_senate_deadlock_second
 			allowed = { always = no }
 			modifier = {
 				political_power_factor = -0.50
@@ -16,7 +16,7 @@ ideas = {
 		}
 
 		HOL_minor_economic_woes = {
-			picture = LEC_low_reserves
+			picture = HOL_minor_economic_woes
 			allowed = { always = no }
 			modifier = {
 				stability_factor = -0.05
@@ -27,7 +27,7 @@ ideas = {
 		}
 
 		HOL_verzuiling = {
-			picture = government
+			picture = HOL_verzuiling
 			allowed = { always = no }
 			modifier = {
 				stability_factor = -0.1

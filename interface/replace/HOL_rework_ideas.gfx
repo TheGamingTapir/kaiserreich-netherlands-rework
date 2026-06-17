@@ -1,0 +1,22 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_idea_HOL_verzuiling"
+		texturefile = "gfx/interface/ideas/HOL_verzuiling.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_HOL_senate_deadlock"
+		texturefile = "gfx/interface/ideas/HOL_senate_deadlock.tga"
+	}
+
+	spriteType = {
+		name = "GFX_idea_HOL_senate_deadlock_second"
+		texturefile = "gfx/interface/ideas/HOL_senate_deadlock_second.tga"
+	}
+
+	spriteType = {
+		name = "GFX_idea_HOL_minor_economic_woes"
+		texturefile = "gfx/interface/ideas/HOL_minor_economic_woes.tga"
+	}
+}
